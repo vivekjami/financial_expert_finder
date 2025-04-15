@@ -140,7 +140,16 @@ dist
 /venv
 venv
 
-Copy
+# Root .gitignore
+node_modules/
+__pycache__/
+*.pyc
+.env
+*.DS_Store
+venv/
+*.log
+.vscode/
+
 # .gitignore
 node_modules/
 __pycache__/
@@ -148,3 +157,6 @@ __pycache__/
 .env
 *.DS_Store
 venv/
+*.log
+dist/
+.vercel/
