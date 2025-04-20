@@ -8,7 +8,7 @@ class Review(models.Model):
     reviewer = models.ForeignKey(User, related_name='reviews_given', on_delete=models.CASCADE)
     expert = models.ForeignKey(User, related_name='reviews_received', on_delete=models.CASCADE)
     rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
-    comment = models.TextField()
+    comment = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
