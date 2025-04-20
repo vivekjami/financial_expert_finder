@@ -1,0 +1,1 @@
+web: gunicorn financial_expert_finder.wsgi --log-file -

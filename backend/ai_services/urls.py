@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import ChatbotView, MatchExpertsView
+from .views import ChatbotView, ExpertMatchingView
 
 urlpatterns = [
     path('chatbot/', ChatbotView.as_view(), name='chatbot'),
-    path('match/', MatchExpertsView.as_view(), name='match-experts'),
+    path('match/', ExpertMatchingView.as_view(), name='expert-matching'),
 ]
