@@ -27,15 +27,7 @@ SECRET_KEY = 'django-insecure-*lw^wf&8d7nnvffeq8za*g3vn0-=c@saayt*%hf@t(*-$-0yw&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-if not DEBUG:
-    DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('PGDATABASE'),
-        'USER': os.getenv('PGUSER'),
-        'PASSWORD': os.getenv('PGPASSWORD'),
-        'HOST': os.getenv('PGHOST'),
-        'PORT': os.getenv('PGPORT'),
-    }
+
 
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*.up.railway.app']
